@@ -21,5 +21,5 @@ const MyHometask: Hometask = {
 interface MyArray<T> {
 	[N: number]: T;
 
-    reduce(callback: (previousValue: any, currentValue: T, index: number, arr: Array<T>) => T, initialValue?: T): any;
+    reduce<U>(callback: (previousValue: U, currentValue: T, index: number, arr: Array<T>) => T, initialValue?: U): U;
 }
