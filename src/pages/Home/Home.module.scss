@@ -6,13 +6,12 @@
 }
 
 .contentWrapper {
-  border: 1px solid red;
   display: flex;
   overflow: hidden;
 }
 
 .contentText {
-  width: calc(100% - $parallaxWidth);
+  width: calc(100% - 793px); // todo
 }
 
 .contentParallax {
