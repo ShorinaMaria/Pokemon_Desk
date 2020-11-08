@@ -70,9 +70,6 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    historyApiFallback: true,
-  },
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
@@ -82,6 +79,7 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
+    historyApiFallback: true,
   },
   devtool: 'source-map',
 };

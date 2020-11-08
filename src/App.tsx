@@ -6,9 +6,8 @@ import PokedexPage from './pages/Pokedex';
 const App = () => {
   return (
     <BrowserRouter>
-      <Route path="/" component={HomePage} />
-      <Route path="/home" component={HomePage} />
-      <Route path="/pokedesk" component={PokedexPage} />
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/pokedex" component={PokedexPage} />
     </BrowserRouter>
   );
 };
