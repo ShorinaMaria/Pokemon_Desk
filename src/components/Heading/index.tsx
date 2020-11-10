@@ -2,6 +2,7 @@ import React from 'react';
 
 interface IHeading {
   size: number;
+  className?: string;
 }
 
 const Heading: React.FC<IHeading> = ({ children, size }) => {
