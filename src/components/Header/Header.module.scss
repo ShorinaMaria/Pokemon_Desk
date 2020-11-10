@@ -1,6 +1,61 @@
-.header {
-  font-size: 40px;
-  text-transform: uppercase;
-  color: white;
-  margin-top: 0;
+@import '../../variables';
+
+.root {
+  height: 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1125px;
+  height: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemonLogo {
+  width: 158px;
+  height: 63px;
+}
+
+.menuWrapper {
+  display: flex;
+  align-items: center;
+  max-width: 658px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menuLink {
+  // font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  color: $dark;
+  text-decoration: none;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 1%;
+    height: 1px;
+    background-color: $dark;
+    border: 1px solid $dark;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: opacity, width ease-in-out 0.25s;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
 }

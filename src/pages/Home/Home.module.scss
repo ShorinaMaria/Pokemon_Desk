@@ -1,0 +1,19 @@
+@import '../../variables';
+
+.root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $third 0%, $primary 100%);
+}
+
+.contentWrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.contentText {
+  width: calc(100% - 793px); // todo
+}
+
+.contentParallax {
+  width: $parallaxWidth;
+}

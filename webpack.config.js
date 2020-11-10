@@ -12,24 +12,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/,
+    poll: 1000,
+  },
   module: {
     rules: [
       {
         test: /\.[tj]sx?$/,
         exclude: /node_modules/,
-        exclude: /node_modules_/,
         use: ['ts-loader'],
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        exclude: /node_modules_/,
         use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        exclude: /node_modules_/,
         use: [
           'style-loader',
           'css-modules-typescript-loader?modules',
@@ -46,6 +48,26 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        use: ['url-loader'],
+      },
     ],
   },
   plugins: [
@@ -57,6 +79,7 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
+    historyApiFallback: true,
   },
   devtool: 'source-map',
 };
