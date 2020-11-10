@@ -8,7 +8,7 @@ interface EmptyPageProps {
 const EmptyPage: React.FC<EmptyPageProps> = ({ title }) => <div>
     <Header/>
     <div>
-        Empty page for {title}
+        Empty page for {title}.
     </div>
 </div>;
 
