@@ -24,6 +24,7 @@
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
     "@types/classnames": "^2.2.11",
+    "@types/hookrouter": "^2.2.3",
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
