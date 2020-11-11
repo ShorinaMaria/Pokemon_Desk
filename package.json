@@ -18,6 +18,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    "hookrouter": "^1.2.3",
     "webpack": "^4.44.2"
   },
   "devDependencies": {
@@ -26,7 +27,6 @@
     "@types/hookrouter": "^2.2.3",
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
-    "@types/react-router-dom": "^5.1.6",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "babel-loader": "^8.1.0",
@@ -44,7 +44,6 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
-    "hookrouter": "^1.2.3",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1",
@@ -63,6 +62,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

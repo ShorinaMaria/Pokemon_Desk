@@ -1,7 +1,7 @@
 import React from 'react';
-import {A, usePath} from 'hookrouter';
-import { GENERAL_MENU } from '../../routes';
+import { A, usePath } from 'hookrouter';
 import cn from 'classnames';
+import { GENERAL_MENU } from '../../routes';
 import s from './Header.module.scss';
 import { ReactComponent as PokemonLogoSvg } from './assets/Logo.svg';
 
@@ -19,10 +19,10 @@ const Header = () => {
             <A
               key={title}
               className={cn(s.menuLink, {
-                [s.activeLink]: link === path
+                [s.activeLink]: link === path,
               })}
               href={link}>
-                {title}
+              {title}
             </A>
           ))}
         </div>
