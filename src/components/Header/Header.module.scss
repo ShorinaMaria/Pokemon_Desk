@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
+  background-color: $third;
 }
 
 .wrapper {
@@ -31,7 +32,6 @@
 }
 
 .menuLink {
-  // font-family: Karla;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -52,7 +52,8 @@
     transform: translate(-50%, 0);
     transition: opacity, width ease-in-out 0.25s;
   }
-  &:hover {
+  &:hover,
+  &.activeLink {
     &:after {
       width: 100%;
       opacity: 1;
