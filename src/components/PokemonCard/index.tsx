@@ -4,7 +4,7 @@ import Heading from '../Heading';
 
 import s from './PokemonCard.module.scss';
 
-interface IPokemon {
+export interface IPokemon {
   name_clean: string;
   abilities: Array<string>;
   // [

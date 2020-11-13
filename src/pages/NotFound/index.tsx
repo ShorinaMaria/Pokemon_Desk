@@ -1,13 +1,14 @@
 import React from 'react';
 import { navigate } from 'hookrouter';
 import Button from '../../components/Button';
+import { LinkEnum } from '../../routes';
 
 const NotFoundPage = () => {
   return (
     <div>
       <Button
         onClick={() => {
-          navigate('/');
+          navigate(LinkEnum.HOME);
         }}>
         Go home
       </Button>
