@@ -9,7 +9,7 @@ interface IPokemonsData {
 }
 
 const usePokemons = () => {
-  const [data, setData] = useState({}) as [data: IPokemonsData, setData: React.Dispatch<React.SetStateAction<{}>>];
+  const [data, setData] = useState<IPokemonsData>({ total: 0, pokemons: [] });
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
