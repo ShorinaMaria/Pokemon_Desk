@@ -16,7 +16,7 @@ const useData = <D>(endpoint: string, query: object, deps: Array<any> = []): IUs
     const getData = async () => {
       setIsLoading(true);
       try {
-        const result = await req(endpoint, query);
+        const result = await req<D>(endpoint, query);
         setData(result);
       } catch (e) {
         setIsError(true);

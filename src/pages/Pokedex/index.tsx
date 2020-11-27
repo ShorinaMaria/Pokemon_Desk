@@ -9,15 +9,19 @@ interface IPokemonsData {
   pokemons: Array<IPokemon>;
 }
 
+interface IQuery {
+  name?: string;
+}
+
 const PokedexPage = () => {
   const [searchValue, setSearchValue] = useState(``);
-  const [query, setQuery] = useState({});
+  const [query, setQuery] = useState<IQuery>({});
   const { data, isLoading, isError } = useData<IPokemonsData>(`getPokemons`, query, [searchValue]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
-    setQuery((value) => ({
-      ...value,
+    setQuery((state: IQuery) => ({
+      ...state,
       name: e.target.value,
     }));
   };
@@ -39,7 +43,7 @@ const PokedexPage = () => {
           {isError ? 'Error!' : null}
         </p>
 
-        {isLoaded() ? (
+        {data && isLoaded() ? (
           <div className={s.pokemonsContainer}>
             {data.pokemons.map((el) => (
               <div key={el.id}>
