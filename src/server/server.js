@@ -38,9 +38,13 @@ const init = async () => {
   });
 
   await server.start();
+  /* eslint-disable no-console */
+  console.log('Server running on %s', server.info.uri);
 };
 
-process.on('unhandledRejection', () => {
+process.on('unhandledRejection', (err) => {
+  /* eslint-disable no-console */
+  console.log(err);
   process.exit(1);
 });
 
